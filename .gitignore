@@ -1,6 +1,12 @@
 node_modules
 npm-debug.log
 .DS_store
+
+# node version managers
 .nvmrc
 .naverc
+
+# emacs 
 *~
+\#*\#
+.\#*
