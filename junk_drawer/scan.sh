@@ -8,4 +8,4 @@ local_ip_range=`ipconfig getifaddr en0 | sed -e 's/\(^\([0-9]\+\.\)\{3\}\).*/\10
 sonos_port=1400;
 # Scan network for port 1400 (sonos) open hosts
 echo "local ip range:" $local_ip_range
-nmap -T4 -n -p $sonos_port --open --min-parallelism 100 $local_ip_range
+nmap -T4 -sU -n -p $sonos_port --open --min-parallelism 100 $local_ip_range
