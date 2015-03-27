@@ -10,7 +10,8 @@ server.listen(6818, function(){
          // todo ip
          speakers.getVolume(function(data) {
              console.log("led state", data);
-	     speakers.play("http://172.16.1.103:6818/sounds/sound.m4a", function(err, playing) {
+        // TODO this should get your IP automatically.
+	     speakers.play("http://10.0.0.9:6818/sound.m4a", function(err, playing) {
                  if (err) {
                      console.error("There was an error playing:", err);
                  }
