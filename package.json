@@ -1,14 +1,16 @@
 {
-  "name": "propagandome",
-  "version": "0.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "BSD-2-Clause",
-  "dependencies": {
-    "sonos": "~0.7.0"
-  }
+    "name": "annunciator",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node app.js",
+	"dbg": "DEBUG=* node app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "John Elliott",
+    "license": "BSD-3-Clause",
+    "dependencies": {
+        "sonos": "~0.8.0"
+    }
 }

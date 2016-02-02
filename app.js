@@ -1,9 +1,33 @@
-// * Propagandome HAHAHHAHAHAHAHHAHAAAAA
+var server = require ("./server");
+var speakers = require("./speakers");
+var say = require("./lib/say").speak;
 
+server.listen(6818, function(){
+    console.log("server listening");
+    say("Hello, yes, this is dog.", "sound", function () {
+         console.log("text to speech complete");
+         // tell sonos to play this crap
+         // todo ip
+         speakers.getVolume(function(data) {
+             console.log("led state", data);
+        // TODO this should get your IP automatically.
+	     speakers.play("http://10.0.0.9:6818/sound.m4a", function(err, playing) {
+                 if (err) {
+                     console.error("There was an error playing:", err);
+                 }
+                 else {
+                     console.log("Playing:", playing);
+                 }
+             });
+         });
 
-var Sonos = require('Sonos');
-var sonos = new Sonos(process.env.SONOS_HOST || '192.168.2.11');
-
-sonos.play('https://archive.org/download/testmp3testfile/mpthreetest.mp3', function(err, playing) {
-  console.log([err, playing]);
+         function callback (err, data) {
+             if (err) {
+         	console.log(err, data);
+         	return;
+             }
+             console.log(data);
+         }
+    });
 });
+
