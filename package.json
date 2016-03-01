@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node index.js",
     "cs": "SONOS_HOST=\"10.28.63.43\" npm start",
+    "sf": "SONOS_HOST=\"10.28.63.92\" npm start",
     "dbg": "DEBUG=* node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

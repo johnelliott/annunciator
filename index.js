@@ -20,7 +20,7 @@ var server = http.createServer(function (request, response) {
 
 server.listen(6818, function(){
 	console.log("server listening");
-	say("hello people this is erica", "sound", function () {
+	say("Welcome to Social Tables", "sound", function () {
 		console.log("text to speech complete");
 		// TODO ip
 		//speakers.currentTrack(function(err, info) {
